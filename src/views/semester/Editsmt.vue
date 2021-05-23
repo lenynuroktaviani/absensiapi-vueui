@@ -34,7 +34,7 @@ export default {
     const router = useRouter();
     const route = useRoute()
     onMounted(()=>{
-      axios.get(`http://127.0.0.1:8001/api/semesters/${route.params.id}`)
+      axios.get(`http://127.0.0.1:8000/api/semesters/${route.params.id}`)
       .then(response => {
         console.log(response.data.data.semester)
         semesters.semester = response.data.data.semester
@@ -44,7 +44,7 @@ export default {
     })
     function update(){
       let semester = semesters.semester
-      axios.put(`http://127.0.0.1:8001/api/semesters/${route.params.id}`, {
+      axios.put(`http://127.0.0.1:8000/api/semesters/${route.params.id}`, {
         semester: semester
       })
       .then(() => {

@@ -38,7 +38,7 @@ export default {
   setup(){
     let kontrak_matakuliah = ref([])
     onMounted(() => {
-      axios.get('http://127.0.0.1:8001/api/kontraks')
+      axios.get('http://127.0.0.1:8000/api/kontraks')
       .then(response => {
         kontrak_matakuliah.value = response.data.data
       })
@@ -47,7 +47,7 @@ export default {
       })
     })
     function kontrakDelete(id){
-      axios.delete(`http://127.0.0.1:8001/api/kontraks/${id}`)
+      axios.delete(`http://127.0.0.1:8000/api/kontraks/${id}`)
       .then(()=>{
         let z = this.kontrak_matakuliah.map(kontrak_matakuliah => kontrak_matakuliah.id).indexOf(id);
         this.kontrak_matakuliah.splice(z, 1)

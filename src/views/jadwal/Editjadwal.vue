@@ -43,7 +43,7 @@ export default {
     const router = useRouter();
     const route = useRoute()
     onMounted(()=>{
-      axios.get(`http://127.0.0.1:8001/api/jadwals/${route.params.id}`)
+      axios.get(`http://127.0.0.1:8000/api/jadwals/${route.params.id}`)
       .then(response => {
         console.log(response.data.data.jadwal)
         jadwals.jadwal = response.data.data.jadwal
@@ -55,7 +55,7 @@ export default {
     function update(){
       let jadwal = jadwals.jadwal
       let matakuliah_id = jadwals.matakuliah_id
-      axios.put(`http://127.0.0.1:8001/api/jadwals/${route.params.id}`, {
+      axios.put(`http://127.0.0.1:8000/api/jadwals/${route.params.id}`, {
         jadwal: jadwal,
         matakuliah_id: matakuliah_id
       })

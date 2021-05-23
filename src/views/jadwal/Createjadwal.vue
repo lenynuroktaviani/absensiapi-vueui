@@ -45,7 +45,7 @@ export default {
     function store(){
       let jadwal = jadwals.jadwal
       let matakuliah_id = jadwals.matakuliah_id
-      axios.post('http://127.0.0.1:8001/api/jadwals', {
+      axios.post('http://127.0.0.1:8000/api/jadwals', {
         jadwal: jadwal,
         matakuliah_id: matakuliah_id
         

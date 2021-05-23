@@ -35,7 +35,7 @@ export default {
   setup(){
     let semester = ref([])
     onMounted(() => {
-      axios.get('http://127.0.0.1:8001/api/semesters')
+      axios.get('http://127.0.0.1:8000/api/semesters')
       .then(response => {
         semester.value = response.data.data
       })
@@ -44,7 +44,7 @@ export default {
       })
     })
     function smtDelete(id){
-      axios.delete(`http://127.0.0.1:8001/api/semesters/${id}`)
+      axios.delete(`http://127.0.0.1:8000/api/semesters/${id}`)
       .then(()=>{
         let z = this.semester.map(semester => semester.id).indexOf(id);
         this.semester.splice(z, 1)

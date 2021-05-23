@@ -43,7 +43,7 @@ export default {
     const router = useRouter();
     const route = useRoute()
     onMounted(()=>{
-      axios.get(`http://127.0.0.1:8001/api/matakuliahs/${route.params.id}`)
+      axios.get(`http://127.0.0.1:8000/api/matakuliahs/${route.params.id}`)
       .then(response => {
         console.log(response.data.data.nama_matakuliah)
         matakuliahs.nama_matakuliah = response.data.data.nama_matakuliah
@@ -55,7 +55,7 @@ export default {
     function update(){
       let nama_matakuliah = matakuliahs.nama_matakuliah
       let sks = matakuliahs.sks
-      axios.put(`http://127.0.0.1:8001/api/matakuliahs/${route.params.id}`, {
+      axios.put(`http://127.0.0.1:8000/api/matakuliahs/${route.params.id}`, {
         nama_matakuliah: nama_matakuliah,
         sks: sks
       })

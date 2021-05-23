@@ -45,7 +45,7 @@ export default {
     function store(){
       let nama_matakuliah = matakuliahs.nama_matakuliah
       let sks = matakuliahs.sks
-      axios.post('http://127.0.0.1:8001/api/matakuliahs', {
+      axios.post('http://127.0.0.1:8000/api/matakuliahs', {
         nama_matakuliah: nama_matakuliah,
         sks: sks
         

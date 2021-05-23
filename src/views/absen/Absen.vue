@@ -41,7 +41,7 @@ export default {
    setup(){
     let absen = ref([])
     onMounted(() => {
-      axios.get('http://127.0.0.1:8001/api/absens')
+      axios.get('http://127.0.0.1:8000/api/absens')
       .then(response => {
         absen.value = response.data.data
       })
@@ -50,7 +50,7 @@ export default {
       })
     })
     function absenDelete(id){
-      axios.delete(`http://127.0.0.1:8001/api/absens/${id}`)
+      axios.delete(`http://127.0.0.1:8000/api/absens/${id}`)
       .then(()=>{
         let z = this.absen.map(absen => absen.id).indexOf(id);
         this.absen.splice(z, 1)

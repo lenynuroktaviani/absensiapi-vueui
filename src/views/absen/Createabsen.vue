@@ -65,7 +65,7 @@ export default {
       let mahasiswa_id = absens.mahasiswa_id
       let matakuliah_id = absens.matakuliah_id
       let keterangan = absens.keterangan
-      axios.post('http://127.0.0.1:8001/api/absens', {
+      axios.post('http://127.0.0.1:8000/api/absens', {
         waktu_absen: waktu_absen,
         mahasiswa_id: mahasiswa_id,
         matakuliah_id: matakuliah_id,
