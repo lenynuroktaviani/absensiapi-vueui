@@ -61,7 +61,7 @@ export default {
     const router = useRouter();
     const route = useRoute()
     onMounted(()=>{
-      axios.get(`http://127.0.0.1:8001/api/absens/${route.params.id}`)
+      axios.get(`http://127.0.0.1:8000/api/absens/${route.params.id}`)
       .then(response => {
         console.log(response.data.data.mahasiswa_id)
         absens.waktu_absen = response.data.data.waktu_absen
@@ -77,7 +77,7 @@ export default {
       let mahasiswa_id = absens.mahasiswa_id
       let matakuliah_id = absens.matakuliah_id
       let keterangan = absens.keterangan
-      axios.put(`http://127.0.0.1:8001/api/absens/${route.params.id}`, {
+      axios.put(`http://127.0.0.1:8000/api/absens/${route.params.id}`, {
         waktu_absen: waktu_absen,
         mahasiswa_id: mahasiswa_id,
         matakuliah_id: matakuliah_id,

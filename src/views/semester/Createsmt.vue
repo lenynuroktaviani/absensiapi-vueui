@@ -34,7 +34,7 @@ export default {
     const router = useRouter()
     function store(){
       let semester = semesters.semester
-      axios.post('http://127.0.0.1:8001/api/semesters', {
+      axios.post('http://127.0.0.1:8000/api/semesters', {
         semester: semester
         
       }).then(() => {

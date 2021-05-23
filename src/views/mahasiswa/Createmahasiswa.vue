@@ -65,7 +65,7 @@ export default {
       let alamat = mahasiswas.alamat
       let no_tlp = mahasiswas.no_tlp
       let email = mahasiswas.email
-      axios.post('http://127.0.0.1:8001/api/mahasiswas', {
+      axios.post('http://127.0.0.1:8000/api/mahasiswas', {
         nama_mahasiswa: nama_mahasiswa,
         alamat: alamat,
         no_tlp: no_tlp,

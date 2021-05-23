@@ -45,7 +45,7 @@ export default {
     function store(){
       let mahasiswa_id = kontrak.mahasiswa_id
       let semester_id = kontrak.semester_id
-      axios.post('http://127.0.0.1:8001/api/kontraka', {
+      axios.post('http://127.0.0.1:8000/api/kontraka', {
         mahasiswa_id: mahasiswa_id,
         semester_id: semester_id
         

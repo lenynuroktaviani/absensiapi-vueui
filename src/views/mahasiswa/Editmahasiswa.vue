@@ -60,7 +60,7 @@ export default {
     const router = useRouter();
     const route = useRoute()
     onMounted(()=>{
-      axios.get(`http://127.0.0.1:8001/api/mahasiswas/${route.params.id}`)
+      axios.get(`http://127.0.0.1:8000/api/mahasiswas/${route.params.id}`)
       .then(response => {
         console.log(response.data.data.nama_mahasiswa)
         mahasiswas.nama_mahasiswa = response.data.data.nama_mahasiswa
@@ -76,7 +76,7 @@ export default {
       let alamat = mahasiswas.alamat
       let no_tlp = mahasiswas.no_tlp
       let email = mahasiswas.email
-      axios.put(`http://127.0.0.1:8001/api/mahasiswas/${route.params.id}`, {
+      axios.put(`http://127.0.0.1:8000/api/mahasiswas/${route.params.id}`, {
         nama_mahasiswa: nama_mahasiswa,
         alamat: alamat,
         no_tlp: no_tlp,

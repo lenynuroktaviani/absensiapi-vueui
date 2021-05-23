@@ -45,7 +45,7 @@ export default {
    setup(){
     let mahasiswa = ref([])
     onMounted(() => {
-      axios.get('http://127.0.0.1:8001/api/mahasiswas')
+      axios.get('http://127.0.0.1:8000/api/mahasiswas')
       .then(response => {
         mahasiswa.value = response.data.data
       })
@@ -54,7 +54,7 @@ export default {
       })
     })
     function mahasiswaDelete(id){
-      axios.delete(`http://127.0.0.1:8001/api/mahasiswas/${id}`)
+      axios.delete(`http://127.0.0.1:8000/api/mahasiswas/${id}`)
       .then(()=>{
         let z = this.mahasiswa.map(mahasiswa => mahasiswa.id).indexOf(id);
         this.mahasiswa.splice(z, 1)

@@ -38,7 +38,7 @@ export default {
   setup(){
     let matkul = ref([])
     onMounted(() => {
-      axios.get('http://127.0.0.1:8001/api/matakuliahs')
+      axios.get('http://127.0.0.1:8000/api/matakuliahs')
       .then(response => {
         matkul.value = response.data.data
       })
@@ -47,7 +47,7 @@ export default {
       })
     })
     function matakuliahDelete(id){
-      axios.delete(`http://127.0.0.1:8001/api/matakuliahs/${id}`)
+      axios.delete(`http://127.0.0.1:8000/api/matakuliahs/${id}`)
       .then(()=>{
         let z = this.matkul.map(matkul => matkul.id).indexOf(id);
         this.matkul.splice(z, 1)
